@@ -15,6 +15,14 @@
 
 
 <style>
+  .m-menu {
+    display: none;
+  }
+
+  .db-none {
+    display: none;
+  }
+
   .green-tea {
     color: rgb(171, 239, 95);
   }
@@ -29,6 +37,37 @@
 
   .border-tran {
     border: 1px solid transparent;
+  }
+
+  .ball {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    .hide-ml {
+      display: none;
+    }
+
+    .block-ml {
+      display: block;
+    }
+
+    .r-icon {
+      margin-left: -40px;
+      scale: 80%;
+    }
+
+    .bsn {
+      display: block;
+    }
+
+    .ball {
+      position: relative;
+      left: 218px;
+      top: -17px;
+      z-index: -2;
+      color: rgb(255, 255, 255);
+    }
   }
 </style>
 
@@ -47,27 +86,24 @@
 
       <!-- <a> A tags </a> -->
       <div class="flex flex-row gap-[80px] mt-10 text-[20px] w-[680px] items-center justify-center m-auto 
-        ml-[-200px]
+        ml-[-200px] hide-ml border-tran">
 
 
-        border-tran">
+        <a class="hide-ml" href="">Home</a>
 
+        <a class="hide-ml" href="">Services</a>
 
-        <a href="">Home</a>
+        <a class="hide-ml" href="">Portfolio</a>
 
-        <a href="">Services</a>
+        <a class="hide-ml" href="">Blogs</a>
 
-        <a href="">Portfolio</a>
-
-        <a href="">Blogs</a>
-
-        <a href="">Contact Us</a>
+        <a class="hide-ml" href="">Contact Us</a>
 
       </div>
 
 
-      <!-- rinterio -->
-      <div class="flex items-center space-x-2 fixed top-4 left-10">
+      <!-- rinterio left icon -->
+      <div class="r-icon flex items-center space-x-2 fixed top-4 left-10">
         <i class="fa-solid fa-circle-arrow-up fa-2x rotate-45 green-tea "></i>
         <h1 class="text-[32px]">
           Rinterio
@@ -79,10 +115,10 @@
 
 
       <!-- navbar </a> -->
-      <div class="fixed top-4 right-10">
+      <div class="fixed top-4 right-10 hide-ml">
 
 
-        <div class="flex-row">
+        <div class="flex-row hide-ml">
 
 
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -98,10 +134,22 @@
             </h2>
             <i class="fa-solid fa-circle-arrow-up fa-2x rotate-45"></i>
           </div>
-
+          <!-- Book Consult -->
         </div>
-
+        <!-- navbar </a> -->
       </div>
+
+      <!-- navbar </a> -->
+
+
+      <!-- navbar mobile menu -->
+
+      <div class="m-menu bsn  fixed top-7 right-60">
+
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="w-[30px] h-[30px] bg-gray-300 rounded-full ball block-ml"></div>
+      <!-- navbar mobile menu -->
     </header>
 
 
